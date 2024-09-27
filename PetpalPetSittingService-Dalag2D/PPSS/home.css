@@ -1,0 +1,361 @@
+* {
+    font-family: 'Times New Roman','Arial Narrow Bold', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #121212;
+    color: #e0e0e0;
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background: linear-gradient(to right, #333, #444, #333);
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    height: 20px;
+    width: 65%;
+}
+
+.navbar ul {
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    font-weight: bolder;
+}
+
+a {
+    color: #e0e0e0;
+    outline: none;
+    text-decoration: none;
+}
+
+a:hover {
+    color: orangered;
+}
+
+main {
+    margin-top: -50px;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url('PetSitting.png') no-repeat center center;
+    background-size: cover;
+}
+
+main h2 {
+    filter: brightness(1);
+    background: linear-gradient(to right, #bb86fc, #ff9800, #ff4081);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 70px;
+}
+
+main h3 {
+    color: #e0e0e0;
+    background-color: rgba(19, 18, 18, 0.7);
+    padding: 5px 10px 10px 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 25px;
+    font-family: 'Segoe UI';
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    background-color: #333;
+    border: 1px solid #555;
+    color: #e0e0e0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #8e642d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #632a1c;
+}
+
+footer {
+    padding: 5px;
+    background: linear-gradient(to right, #333, #444, #333);
+    color: #fff;
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-weight: bolder;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    backdrop-filter: blur(20px);
+    min-width: 100px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: -20px;
+    cursor: pointer;
+}
+
+.dropdown-content div {
+    color: #e0e0e0;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+.dropdown-content div:hover {
+    background-color: #555;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+}
+
+.dropdown-content img {
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+}
+
+#admin > img,
+#user > img {
+    height: 30px;
+    width: 30px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #333;
+    backdrop-filter: blur(20px);
+    padding: 20px;
+    border: 2px solid #555;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    margin: auto;
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    color: #e0e0e0;
+}
+
+.modal button {
+    position: relative;
+    left: 170px;
+}
+
+.modal h2 {
+    position: relative;
+    left: 100px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.signupLink a {
+    text-decoration: none;
+    color: #e0e0e0;
+}
+
+.signupLink a:hover {
+    color: red;
+}
+
+.loginLink a {
+    text-decoration: none;
+    color: #e0e0e0;
+}
+
+.loginLink a:hover {
+    color: red;
+}
+
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 36px;
+    background: linear-gradient(to right, #bb86fc, #ff9800, #ff4081);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+section p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #e0e0e0;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: justify;
+}
+
+section h1 {
+    font-size: 32px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    height: 60px;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+em {
+    color: #ff9800;
+}
+
+.about_page {
+    background-color: #1e1e1e;
+    border-top: 5px solid #4CAF50;
+    padding: 60px 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+.services_page {
+    background-color: #2b2b2b;
+    border-top: 5px solid #ff0000;
+    padding: 60px 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+.contact_page {
+    background-color: #1e1e1e;
+    border-top: 5px solid #2196F3;
+    padding: 60px 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+.center {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .modal-content {
+        width: 95%;
+    }
+}
+
+.input-icon {
+    position: relative;
+}
+
+.input-icon i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.input-icon input {
+    padding-left: 30px;
+}
